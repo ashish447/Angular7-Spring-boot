@@ -13,10 +13,11 @@ pipeline {
 
             git 'https://github.com/ashish447/Angular7-Spring-boot/'
 
-
+            sh "chmod 777 mvnw"  
+            sh  "mvn -v"
             // Run Maven on a Unix agent.
 
-            sh "./mvnw -Dmaven.test.failure.ignore=true clean package"
+            sh "mvn  -Dmaven.test.failure.ignore=true clean package -DskipTest"
 
 
             // To run Maven on a Windows agent, use

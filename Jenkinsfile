@@ -12,6 +12,13 @@ pipeline {
             // Get some code from a GitHub repository
 
             git 'https://github.com/ashish447/Angular7-Spring-boot/'
+B
+
+
+
+
+	sh "test"
+		
 
             sh "chmod 777 mvnw"  
             sh  "mvn -v"
